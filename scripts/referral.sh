@@ -8,10 +8,9 @@ TICK="[\e[32m ✔ \e[0m]"
 PIHOLE_LOCATION="/root/k8s-cfg/pihole/pihole"
 #GRAVITY_UPDATE_COMMAND="pihole -g"
 echo -e " \e[1m This file contains tracking and adserving domains. Run this script if you use specific service that require certain adserving domains to be whitelisted. If you don't use such service, please run ./whitelist.sh  \e[0m"
-read -p "Do you want to continue (Y/N)? " -n 1 -r
+#read -p "Do you want to continue (Y/N)? " -n 1 -r
 echo   
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+
 
 	echo -e " \e[1m This script will download and add domains from the repo to whitelist.txt \e[0m"
 	sleep 1
@@ -41,4 +40,4 @@ then
 	echo -e " \e[1m  Happy AdBlocking :)\e[0m"
 	echo -e "\n\n"
 
-fi
+

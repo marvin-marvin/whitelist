@@ -5,8 +5,8 @@
 # Created by Anudeep
 #================================================================================
 TICK="[\e[32m ✔ \e[0m]"
-PIHOLE_LOCATION="/etc/pihole"
-GRAVITY_UPDATE_COMMAND="pihole -g"
+PIHOLE_LOCATION="/root/k8s-cfg/pihole/pihole"
+#GRAVITY_UPDATE_COMMAND="pihole -g"
 echo -e " \e[1m This file contains tracking and adserving domains. Run this script if you use specific service that require certain adserving domains to be whitelisted. If you don't use such service, please run ./whitelist.sh  \e[0m"
 read -p "Do you want to continue (Y/N)? " -n 1 -r
 echo   
@@ -32,7 +32,7 @@ then
 
 	wait
 	echo -e " [...] \e[32m Pi-hole gravity rebuilding lists. This may take a while \e[0m"
-	${GRAVITY_UPDATE_COMMAND} > /dev/null
+	#${GRAVITY_UPDATE_COMMAND} > /dev/null
 	wait
 	echo -e " ${TICK} \e[32m Pi-hole's gravity updated \e[0m"
 	echo -e " ${TICK} \e[32m Done! \e[0m"

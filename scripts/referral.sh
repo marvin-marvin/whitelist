@@ -27,7 +27,7 @@ echo
 	sleep 0.5
 	echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
 
-	mv "${PIHOLE_LOCATION}"/whitelist.txt /etc/pihole/whitelist.txt.old && cat "${PIHOLE_LOCATION}"/whitelist.txt.old | sort | uniq >> "${PIHOLE_LOCATION}"/whitelist.txt
+	mv "${PIHOLE_LOCATION}"/whitelist.txt "${PIHOLE_LOCATION}"/whitelist.txt.old && cat "${PIHOLE_LOCATION}"/whitelist.txt.old | sort | uniq >> "${PIHOLE_LOCATION}"/whitelist.txt
 
 	wait
 	echo -e " [...] \e[32m Pi-hole gravity rebuilding lists. This may take a while \e[0m"
